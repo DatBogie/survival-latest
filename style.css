@@ -640,3 +640,9 @@ details:open {
 .top {
     margin-top: 0;
 }
+
+.footnote {
+    transition: font-weight 200ms ease, transform 200ms ease;
+    display: inline-block;
+    color: var(--yellow);
+}

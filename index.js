@@ -214,6 +214,18 @@ window.addEventListener("load",function() {
             });
         });
     });
+    
+    document.querySelectorAll(".footnote").forEach((foot)=>{
+        const parent = foot.parentElement;
+        parent.addEventListener("mouseenter",()=>{
+            foot.style.fontWeight = "900";
+            foot.style.transform = "translateY(-5px)";
+        });
+        parent.addEventListener("mouseleave",()=>{
+            foot.style.fontWeight = "unset";
+            foot.style.transform = "unset";
+        });
+    });
 });
 
 window.addEventListener("mousemove",function(m) {
