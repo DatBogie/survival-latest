@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dat Bogie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blur-bg"></div>
+    <div id="hide-pointer"></div>
+    <img src="cursor.svg" class="cursor" width="35px">
+    <div class="if-popup">
+        <div class="if-bar">
+            <button id="if-close"></button>
+            <div>
+                <span id="if-url"></span>
+            </div>
+            <button id="if-open"></button>
+        </div>
+        <iframe></iframe>
+    </div>
+    <div class="display" id="tabbar">
+        <div class="display" id="tabbar-bg">
+            <button id="t-1" class="display tabbtn">Home</button>
+            <button id="t-2" class="display tabbtn">Help</button>
+        </div>
+    </div>
+    <div class="display tabpage" id="tab.t-1">
+        <div id="title" class="display">
+            <h1>Home</h1>
+            <hr class="expanding-hr">
+        </div>
+        <h2>Server Information<br></h2>
+        IP: <code>mc.datbogie.org</code> <button class="copy-code">Copy</button><br>
+        Version: <span title="*as of 7/7/25"><code>1.21.7 (latest)</code><span style="color: var(--yellow);">*</span></span><br>
+        Loader: <code>Vanilla</code> or <code>Fabric</code><br>
+        Required Mods: <span title="*feel free to use any client mods!&#013SkinShuffle is supported!"><code>None</code><span style="color: var(--yellow);">*</span></span><br>
+        <h2>About This Site</h2>
+        <p>
+            This site contains information about all of my projects; from games and software, to ADOFAI levels and more.<br>
+            Click through the tabs at the top to explore!
+        </p>
+        <br><br><br>
+        <p>
+            Color palette: <span class="link" data-href="https://catppuccin.com/palette/">Catppuccin Macchiato</span>.<br>
+            Everything here spaghetti-coded by <a href="https://github.com/DatBogie">me</a>.<br>
+            Repository: <a href="https://github.com/DatBogie/survival-latest">GitHub</a>.<br>
+            <code style="display: none;">Warning: Uploaded artifact size of 1080922598 bytes exceeds the allowed size of 1 GB. Deployment might fail</code>
+        </p>
+        <hr class="expanding-hr">
+    </div>
+    <div class="display tabpage" id="tab.t-2">
+        <div id="title" class="display">
+            <h1>Mod Help</h1>
+            <hr class="expanding-hr">
+        </div>
+        <p>
+            <details>
+                <summary><b>Armor Stand Editor</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        <li>
+                            <details>
+                                <summary>Open the Editor</summary>
+                                <span class="small">Right-click an armor stand with a stick to open the editor.</span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Tools</summary>
+                                <span class="small">
+                                    Use (left/right-click with or drop) a tool to be given its set of controls.<br>
+                                    Sneaking and scrolling with a control will increase or decrease the amount by which a transformation is applied onto the armor stand.<br>
+                                    <ul>
+                                        <li>
+                                            <details>
+                                                <summary>Move</summary>
+                                                <ul>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Axis</summary>
+                                                            <span class="small">
+                                                                Use to switch the movement axis between:
+                                                                <ol>
+                                                                    <li>Forward</li>
+                                                                    <li>X Axis</li>
+                                                                    <li>Y Axis</li>
+                                                                    <li>Z Axis</li>
+                                                                </ol>
+                                                                Right-click or drop to go forward through the list; left-click to go backward.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Move 0.5 blocks backwards</summary>
+                                                            <span class="small">
+                                                                Use to move the armor stand 0.5 blocks towards the player, or negative on the chosen axis.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Move 1 block backwards</summary>
+                                                            <span class="small">
+                                                                Use to move the armor stand 1 block towards the player, or negative on the chosen axis.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Rotate 30 degrees</summary>
+                                                            <span class="small">
+                                                                Right-click or drop to rotate the armor stand 30 degrees counter-clockwise.<br>
+                                                                Left-click to rotate it 30 degrees clockwise.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Move 1 block forwards</summary>
+                                                            <span class="small">
+                                                                Use to move the armor stand 1 block away from the player, or positive on the chosen axis.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Move 0.5 blocks forwards</summary>
+                                                            <span class="small">
+                                                                Use to move the armor stand 0.5 blocks away from the player, or positive on the chosen axis.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Teleport to Player</summary>
+                                                            <span class="small">
+                                                                Use to warp the armor stand to the player's decimal position (not rotation).
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Copy player's rotation</summary>
+                                                            <span class="small">
+                                                                Use to make the armor stand face the same direction as the player.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                </ul>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details>
+                                                <summary>Pose Editor</summary>
+                                                <span class="small">This editor opens when you use one of the controls under the Pose tool.</span>
+                                                <ul>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Axis</summary>
+                                                            <span class="small">
+                                                                Use to switch the rotation axis between:
+                                                                <ol>
+                                                                    <li>Pitch</li>
+                                                                    <li>Yaw</li>
+                                                                    <li>Roll</li>
+                                                                </ol>
+                                                                Right-click or drop to go forward through the list; left-click to go backward.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Rotate -15.0 degrees</summary>
+                                                            <span class="small">
+                                                                Use to rotate the armor stand -15 degrees on the chosen axis.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Rotate -30 degrees</summary>
+                                                            <span class="small">
+                                                                Use to rotate the armor stand -30 degrees on the chosen axis.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Rotate 30 degrees</summary>
+                                                            <span class="small">
+                                                                Use to rotate the armor stand 30 degrees on the chosen axis.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Rotate 15.0 degrees</summary>
+                                                            <span class="small">
+                                                                Use to rotate the armor stand 15 degrees on the chosen axis.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Reset pose</summary>
+                                                            <span class="small">
+                                                                Use to reset the rotation of the part of the armor stand being edited to 0 on all axes.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                </ul>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details>
+                                                <summary>Inventory</summary>
+                                                <span class="small">Use to open a screen wherein the armor stand can be equipped with armor, or given items in its hands.</span>
+                                                <p>
+                                                    <span class="title">Slots:</span>
+                                                    <ol>
+                                                        <span class="small"><i>The glass pane under each slot can be used to prevent players from taking the items when right-clicking on the armor stand.</i></span>
+                                                        <li>Head</li>
+                                                        <li>Chest</li>
+                                                        <li>Legs</li>
+                                                        <li>Feet</li>
+                                                        <li>
+                                                            Mainhand
+                                                        </li>
+                                                        <li>
+                                                            Offhand
+                                                        </li>
+                                                    </ol>
+                                                </p>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details>
+                                                <summary>Rename</summary>
+                                                <span class="small">
+                                                    Use to open a screen wherein the armor stand can be given a custom name.<br>
+                                                    This name will be displayed above its head as a nametag, like a player's.
+                                                </span>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details>
+                                                <summary>Properties</summary>
+                                                <span class="small">
+                                                    Use to be given a set of controls which can be used to change the following properties:<br>
+                                                    <ul>
+                                                        <li>Invisible</li>
+                                                        <li>No Gravity</li>
+                                                        <li>Show Arms</li>
+                                                        <li>Hide Base</li>
+                                                        <li>Visual Fire</li>
+                                                        <li>Small</li>
+                                                        <li>
+                                                            <details>
+                                                                <summary>Scale</summary>
+                                                                <span class="small">
+                                                                    Use to open the scale editor consisting of the following controls:<br>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <details>
+                                                                                <summary>Decrease scale by 0.1</summary>
+                                                                                Shrinks the armor stand by 0.05 blocks.
+                                                                            </details>
+                                                                        </li>
+                                                                        <li>
+                                                                            <details>
+                                                                                <summary>Decrease scale by 0.2</summary>
+                                                                                Shrinks the armor stand by 0.1 blocks.
+                                                                            </details>
+                                                                        </li>
+                                                                        <li>
+                                                                            <details>
+                                                                                <summary>Scale:</summary>
+                                                                                When used, opens a menu wherein the scale of the armor stand can be set.<br>
+                                                                                0.5 scale = 1 block tall; 1.0 scale = 2 blocks tall.
+                                                                            </details>
+                                                                        </li>
+                                                                        <li>
+                                                                            <details>
+                                                                                <summary>Increase scale by 0.1</summary>
+                                                                                Grows the armor stand by 0.05 blocks.
+                                                                            </details>
+                                                                        </li>
+                                                                        <li>
+                                                                            <details>
+                                                                                <summary>Increase scale by 0.2</summary>
+                                                                                Grows the armor stand by 0.1 blocks.
+                                                                            </details>
+                                                                        </li>
+                                                                        <li>
+                                                                            <details>
+                                                                                <summary>Reset scale</summary>
+                                                                                Sets the armor stand's scale to 1.0 (2 blocks tall).
+                                                                            </details>
+                                                                        </li>
+                                                                    </ul>
+                                                                </span>
+                                                            </details>
+                                                        </li>
+                                                    </ul>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details>
+                                                <summary>Copying/Presets</summary>
+                                                Use to save or load presets.<br>
+                                                <ul>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Copy Settings</summary>
+                                                            <span class="small">Copy the armor stand's movement, rotation, pose, name, inventory, and property data.</span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Saved Presets</summary>
+                                                            <span class="small">Opens a menu wherein user-defined presets can be copied.</span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Global Presets</summary>
+                                                            <span class="small">Opens a menu wherein presets included in the mod can be copied.</span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Paste Settings</summary>
+                                                            <span class="small">
+                                                                Appears once armor stand data has been copied.<br>
+                                                                Pastes the copied data (excluding inventory data) onto the current armor stand.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Paste Settings and Inventory</summary>
+                                                            <span class="small">
+                                                                Appears once armor stand data, including non-empty inventory data, has been copied.<br>
+                                                                Pastes the copied data onto the current armor stand.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Create Preset</summary>
+                                                            <span class="small">
+                                                                Appears once armor stand data has been copied.<br>
+                                                                Opens a menu wherein the copied data can be saved as a user-defined preset.<br>
+                                                                Multiple presets <i>can</i> share the same name; to update a preset, delete the old version of it first to update it.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                </ul>
+                                            </details>
+                                        </li>
+                                    </ul>
+                                </span>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Audaki Cart Engine</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        Faster Travel<br>
+                        <span class="small">
+                            Minecarts are now faster.
+                        </span>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Banner Bedsheets</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        <li>
+                            <details>
+                                <summary>Placement</summary>
+                                <span class="small">
+                                    Sneak while placing a banner on the very front or back of a bed to apply that banner as sheets.<br>
+                                    Two sets of sheets can be applied to the bed if placed from the front and back.<br>
+                                    Banner patterns will face away from you when applied.
+                                </span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Removal</summary>
+                                <span class="small">
+                                    Break the bed to remove any attached sheets.<br>
+                                    Sheets may take a few seconds to drop after the bed is broken.
+                                </span>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Banner Flags</b></summary>
+                <div class="details">
+                    <span class="title">Usage</span>
+                    <ul class="top">
+                        <li>
+                            <details>
+                                <summary>Placement</summary>
+                                <span class="small">
+                                    <span title="* vertical fence, wall, glass pane, iron bar, etc.">Sneak while placing a banner on a pole<span style="color: var(--yellow);">*</span> to place a flag.<br></span>
+                                    You must be facing the pole to place the banner as a flag.
+                                </span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Removal</summary>
+                                <span class="small">
+                                    Break the pole to break all of the flags placed on it.<br>
+                                    Flags may take a few seconds to drop after the pole is broken.
+                                </span>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Blasting From Mars</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        <li>
+                            <details>
+                                <summary>Sand → Glass</summary>
+                                <span class="small">Blast sand into glass.</span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Raw Metal Blocks → Metal Blocks</summary>
+                                <span class="small">
+                                    Blasting raw metal blocks will yield the corresponding metal block.<br>
+                                    Eg. blasting a block of raw iron yields a block of iron.
+                                </span>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Bottled Air</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        <li>
+                            <i>Air Is for Breathing!</i><br>
+                            <span class="small">Using a Glass Bottle underwater refills 5 air bubbles.</span>
+                        </li>
+                        <li>
+                            Waste Disposal<br>
+                            <span class="small" title="* fire-type items include: campfires, fire charges, lava buckets, and magma blocks.">
+                                Holding a fire-type<span style="color: var(--yellow);">*</span> item in your offhand slot will give the bottle back.<br>
+                                There's a 65% chance that the bottle is destroyed in the process, resulting in not recieving the bottle back.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Bouncier Beds</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        <i>Five Little Monkeys...</i><br>
+                        <span class="small">Jumping or bouncing on a bed will launch you roughly 1.5 blocks into the air.</span>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Carpet</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        <li>
+                            <details>
+                                <summary>Chain Stone</summary>
+                                <span class="small">Chains act as two-sided slime blocks when pushed by pistons; the ends pull other blocks with them.</span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Movable Block Entities</summary>
+                                <span class="small">Pistons can move hoppers, dispensers, droppers, etc.</span><br>
+                                <span class="small" title="* this is due to HTM; it's either lockable containers or pushable containers."><b>Note: pistons <i>CANNOT</i> move chests, shulker boxes, barrels, and other lockable containers.</b><span style="color: var(--yellow);">*</span></span>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Day Dream</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        <summary><i>I Need String!!!</i></summary>
+                        <span class="small">Go to bed during the day to sleep through the day.</span>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Expanded Enchanting</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        <li>
+                            <details>
+                                <summary>Melee Weapons</summary>
+                                <span class="small">
+                                    <p>
+                                        Axes can now be enchanted with:
+                                        <ul>
+                                            <li>Fire Aspect</li>
+                                            <li>Knockback</li>
+                                            <li>Looting</li>
+                                            <li>Impailing</li>
+                                            <li>Density</li>
+                                            <li>Breach</li>
+                                            <li>Wind Burst</li>
+                                        </ul>
+                                    </p>
+                                    <p>
+                                        Swords can now be enchanted with:
+                                        <ul>
+                                            <li>Impailing</li>
+                                            <li>Density</li>
+                                            <li>Breach</li>
+                                            <li>Wind Burst</li>
+                                        </ul>
+                                    </p>
+                                </span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Ranged Weapons</summary>
+                                <span class="small">
+                                    <p>
+                                        Bows can now be enchanted with:
+                                        <ul>
+                                            <li>Piercing</li>
+                                            <li>Multishot</li>
+                                            <li>Looting</li>
+                                        </ul>
+                                    </p>
+                                    <p>
+                                        Crossbows can now be enchanted with:
+                                        <ul>
+                                            <li>Flame</li>
+                                            <li>Looting</li>
+                                            <li>Power</li>
+                                            <li>Punch</li>
+                                            <li>Infinity</li>
+                                        </ul>
+                                </span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Compatible Enchantments</summary>
+                                <span class="small">
+                                    Previously incompatible enchantments can now all be applied to the same item.<br>
+                                    Eg. a sword can now be enchanted with Sharpness, Smite, and Bane of Arthropods; a bow can have both Infinity and Mending, etc.
+                                </span>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Grindstone Sharper Tools</b></summary>
+                <div class="details">
+                    <span class="title">Usage</span>
+                    <ul class="top">
+                        <details>
+                            <summary>Sharpening</summary>
+                            <span class="small">
+                                Sneak and right-click a grindstone with a weapon to sharpen it.<br>
+                                This will give it 32 "sharpened" uses, wherein the weapon deals 1.5x damage.<br>
+                                Sharpening tools will only make them do more damage; it will not make them mine faster.<br>
+                                Sharpening tools doesn't cost anything.
+                            </span>
+                        </details>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Hey That's Mine (HTM)</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <span class="small"><i>Containers are private by default.</i></span>
+                    <ul class="top">
+                        <li>
+                            <details>
+                                <summary>Permissions/Trust</summary>
+                                <span class="small">
+                                    <ul>
+                                        <li>
+                                            <details>
+                                                <summary>Local vs Global Trust</summary>
+                                                <span class="small">
+                                                    Local trust is specific to a container, while global trust applies to all containers.<br>
+                                                    If you trust a player globally, they can access all of your containers regardless of their protection type.
+                                                </span>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details>
+                                                <summary>Trusting Players</summary>
+                                                <span class="small">
+                                                    To trust a player locally, run:<br>
+                                                    <code style="background-color: var(--base);">/htm trust [@]</code> <button class="copy-data", style="background-color: var(--base);" data-data="/htm trust @">Copy</button><br>
+                                                    Where <code style="background-color: var(--base);">[@]</code> is the name of the player to be trusted.<br>
+                                                    Then, click on the container.<br><br>
+
+                                                    To trust a player globally, run:<br>
+                                                    <code style="background-color: var(--base);">/htm trust [@] global</code> <button class="copy-data", style="background-color: var(--base);" data-data="/htm trust @ global">Copy</button><br>
+                                                    Where <code style="background-color: var(--base);">[@]</code> is the name of the player to be trusted.
+                                                </span>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details>
+                                                <summary>Untrusting Players</summary>
+                                                <span class="small">
+                                                    To untrust a player locally, run:<br>
+                                                    <code style="background-color: var(--base);">/htm untrust [@]</code> <button class="copy-data", style="background-color: var(--base);" data-data="/htm untrust @">Copy</button><br>
+                                                    Where <code style="background-color: var(--base);">[@]</code> is the name of the player to be trusted.<br>
+                                                    Then, click on the container.<br><br>
+
+                                                    To untrust a player globally, run:<br>
+                                                    <code style="background-color: var(--base);">/htm untrust [@] global</code> <button class="copy-data", style="background-color: var(--base);" data-data="/htm untrust @ global">Copy</button><br>
+                                                    Where <code style="background-color: var(--base);">[@]</code> is the name of the player to be trusted.<br>
+                                                    <b>Untrusting a player globally <i>DOESN'T</i> remove their local trust for your containers.</b>
+                                                </span>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details>
+                                                <summary>Transferring Ownership</summary>
+                                                <span class="small">
+                                                    To transfer ownership of a container to another player, run:<br>
+                                                    <code style="background-color: var(--base);">/htm untrust [@]</code> <button class="copy-data", style="background-color: var(--base);" data-data="/htm transfer @">Copy</button><br>
+                                                    Where <code style="background-color: var(--base);">[@]</code> is the name of the player to be trusted.<br>
+                                                    Then, click on the container.<br>
+                                                    <b>This <i>CANNOT</i> be undone</b> (except by the new owner transferring ownership back to you).
+                                                </span>
+                                            </details>
+                                        </li>
+                                    </ul>
+                                </span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Container Protection Types</summary>
+                                <ul>
+                                    <li>
+                                        <details>
+                                            <summary>Locked Containers</summary>
+                                            Containers with this protection type cannot be broken by untrusted players.<br>
+                                            <span class="small">
+                                                <ul>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Setup</summary>
+                                                            <span class="small">
+                                                                <ul>
+                                                                    <li><span title="* chests, shulker boxes, barrels, etc.">Place down a personal container<span style="color: var(--yellow);">*</span>.</span><br></li>
+                                                                    <li>
+                                                                        Hold the item you want to use as a key in your mainhand, then run:<br>
+                                                                        <code style="background-color: var(--base);">/htm set KEY</code> <button class="copy-code" style="background-color: var(--base);">Copy</button><br>
+                                                                        Then, click on the container.
+                                                                    </li>
+                                                                </ul>
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>About</summary>
+                                                            <span class="small">
+                                                                Players will need to hold a key while opening the container to access it, unless they have been explicitly trusted either globally or for the specified container.<br>
+                                                                Any item can be used as a key, but one should ideally use an item with a unique name to avoid others breaking in.<br>
+                                                                If the key is a stick named "<i>Key</i>", any old stick won't work, but any stick named "<i>Key</i>" will.<br>
+                                                                The same key can be used for multiple containers, but each container may only have one key.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                        </details>
+                                    </li>
+                                    <li>
+                                        <details>
+                                            <summary>Private Containers</summary>
+                                            Containers with this protection type cannot be broken by untrusted players.<br>
+                                            <span class="small">
+                                                <ul>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Setup</summary>
+                                                            <span class="small">
+                                                                <ul>
+                                                                    <li><span title="* chests, shulker boxes, barrels, etc.">Place down a personal container<span style="color: var(--yellow);">*</span>.</span><br></li>
+                                                                    <li>
+                                                                        By default, containers are set to private. To change an existing one to private, run:<br>
+                                                                        <code style="background-color: var(--base);">/htm set PRIVATE</code> <button class="copy-code" style="background-color: var(--base);">Copy</button><br>
+                                                                        Then, click on the container.
+                                                                    </li>
+                                                                </ul>
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>About</summary>
+                                                            <span class="small">
+                                                                Players will need to be explicitly trusted either globally or for the specified container to access it.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                        </details>
+                                    </li>
+                                    <li>
+                                        <details>
+                                            <summary>Public Containers</summary>
+                                            <span class="small">
+                                                <ul>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Setup</summary>
+                                                            <span class="small">
+                                                                <ul>
+                                                                    <li><span title="* chests, shulker boxes, barrels, etc.">Place down a personal container<span style="color: var(--yellow);">*</span>.</span><br></li>
+                                                                    <li>
+                                                                        Run:<br>
+                                                                        <code style="background-color: var(--base);">/htm set PUBLIC</code> <button class="copy-code" style="background-color: var(--base);">Copy</button><br>
+                                                                        Then, click on the container.
+                                                                    </li>
+                                                                </ul>
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>About</summary>
+                                                            <span class="small">
+                                                                Public containers act as vanilla containers; they can be accessed by anyone, regardless of trust.
+                                                        </details>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                        </details>
+                                    </li>
+                                    <li>
+                                        <details>
+                                            <summary>Remove Container Protection</summary>
+                                            <span class="small">
+                                                To remove all protection from a container, run:<br>
+                                                <code style="background-color: var(--base);">/htm remove</code> <button class="copy-code" style="background-color: var(--base);"></button><br>
+                                                Then, click on the container.
+                                            </span>
+                                        </details>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Container Protection Flags</summary>
+                                <span class="small">
+                                    <ul>
+                                        <li>
+                                            <details>
+                                                <summary style="text-decoration: line-through;">HOPPERS</summary>
+                                                <b>This flag doesn't currently work. This page will be updated when/if it does.</b>
+                                                <ul>
+                                                    <li>
+                                                        <details>
+                                                            <summary>Setup</summary>
+                                                            <span class="small">
+                                                                <ul>
+                                                                    <li><span title="* chests, shulker boxes, barrels, etc.">Place down a personal container<span style="color: var(--yellow);">*</span>.</span><br></li>
+                                                                    <li>
+                                                                        Run:<br>
+                                                                        <code style="background-color: var(--base);">/htm flag HOPPERS [V]</code> <button class="copy-data", style="background-color: var(--base);" data-data="/htm flag HOPPERS V">Copy</button><br>
+                                                                        Where <code style="background-color: var(--base);">[V]</code> is either <code style="background-color: var(--base);">true</code> or <code style="background-color: var(--base);">false</code>.<br>
+                                                                        Then, click on the container.
+                                                                    </li>
+                                                                </ul>
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details>
+                                                            <summary>About</summary>
+                                                            <span class="small">
+                                                                If enabled, hoppers can pull items from the container.<br>
+                                                                This is enabled by default.<br>
+                                                                This does not affect the ability to pipe items into the container using hoppers.
+                                                            </span>
+                                                        </details>
+                                                    </li>
+                                                </ul>
+                                            </details>
+                                        </li>
+                                    </ul>
+                                </span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Miscellaneous</summary>
+                                <span class="small">
+                                    <ul>
+                                        <li>
+                                            <details>
+                                                <summary>Info</summary>
+                                                <span class="small">
+                                                    <ul>
+                                                        <li>
+                                                            <details>
+                                                                <summary>Usage</summary>
+                                                                To view the protection information of a container, run:<br>
+                                                                <code style="background-color: var(--base);">/htm info</code> <button class="copy-code", style="background-color: var(--base);">Copy</button><br>
+                                                                Then, click on the container.<br>
+                                                            </details>
+                                                        </li>
+                                                        <li>
+                                                            <details>
+                                                                <summary>About</summary>
+                                                                When used on another player's container, a message is displayed containing:
+                                                                <ol>
+                                                                    <li>The protection type</li>
+                                                                    <li>The owner</li>
+                                                                </ol><br>
+                                                                When used on your own container, a message is displayed containing:
+                                                                <ol>
+                                                                    <li>The protection type</li>
+                                                                    <li>The owner</li>
+                                                                    <li>A list of (locally) trusted players</li>
+                                                                    <li>When applicable, the name of the key (not the item type)</li>
+                                                                </ol>
+                                                            </details>
+                                                        </li>
+                                                    </ul>
+                                                </span>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details>
+                                                <summary>Info (Flags)</summary>
+                                                <span class="small">
+                                                    To view the protection flags of a container, run:<br>
+                                                    <code style="background-color: var(--base);">/htm flags</code> <button class="copy-code", style="background-color: var(--base);">Copy</button><br>
+                                                    Then, click on the container.<br>
+                                                </span>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details>
+                                                <summary>Quiet</summary>
+                                                <span class="small">
+                                                    To toggle HTM sending messages when changing options, run:<br>
+                                                    <code style="background-color: var(--base);">/htm quiet</code> <button class="copy-code", style="background-color: var(--base);">Copy</button><br>
+                                                </span>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details>
+                                                <summary>Persist</summary>
+                                                <span class="small">
+                                                    To toggle HTM continuing to apply options after clicking the first time, run:<br>
+                                                    <code style="background-color: var(--base);">/htm persist</code> <button class="copy-code", style="background-color: var(--base);">Copy</button><br>
+                                                </span>
+                                            </details>
+                                        </li>
+                                    </ul>
+                                </span>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Increased Rails Recipe Output</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        <li>
+                            <details>
+                                <summary>Surplus of Rails</summary>
+                                <span class="small">Crafting rails yields 32 rails instead of 16.</span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Surplus of Powered Rails</summary>
+                                <span class="small">Crafting powered rails yields 16 powered rails instead of 6.</span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Surplus of Detector Rails</summary>
+                                <span class="small">Crafting detector rails yields 16 detector rails instead of 6.</span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Surplus of Activator Rails</summary>
+                                <span class="small">Crafting activator rails yields 16 activator rails instead of 6.</span>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Invisible Frames<Frameset></Frameset></b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        <summary><i>Evanesco!</i></summary>
+                        <span class="small">Sneak and right-click on an item frame to toggle its invisibility.</span>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Neutral Animals</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        <details>
+                            <summary>Behavior</summary>
+                            <span class="small">
+                                Certain Previously passive mobs will now follow and attack players for 1–1.5 hearts when attacked.<br>
+                                These include:
+                                <ul>
+                                    <li>Chickens</li>
+                                    <li>Cows</li>
+                                    <li>Pigs</li>
+                                    <li>Rabbits</li>
+                                    <li>Sheep</li>
+                                </ul>
+                            </span>
+                        </details>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Refined Advancements</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        <summary><i>A Whole New World...</i></summary>
+                        <span class="small">...of advancements to achieve. Have fun!</span>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Sit!</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        <li>
+                            <details>
+                                <summary>Sitting</summary>
+                                <span class="small">
+                                    Double-tap sneak while looking down to sit down anywhere.<br>
+                                    Right-click with an empty hand on the top of a stair or top of a bottom slab to sit on it.
+                                </span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Crawling</summary>
+                                <span class="small" title="* if the top of the one-block gap isn't a full block, you'll sit instead.">
+                                    Double-tap sneak while looking down to crawl when your feet are pushed up against a one-block gap<span style="color: var(--yellow);">*</span>.
+                                </span><br>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Softer Hay Bales</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        Softer Landing<br>
+                        <span class="small">Hay Bales now eliminate fall damage when falling on them.</span>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Surface Mushrooms</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        <i>Mushrooms Everywhere!</i><br>
+                        <span class="small">Mushrooms can now be placed anywhere, any time.</span>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Universal Shops</b></summary>
+                <div class="details">
+                    <span class="title">Features</span>
+                    <ul class="top">
+                        <li>
+                            <details>
+                                <summary>Trade Shop</summary>
+                                <p>
+                                    <b>Recipe:</b><br>
+                                    <img src="assets/rdzfgtu.png" alt="plank, wool, plank, plank, iron ingot, plank">
+                                </p>
+                                <p>
+                                    <span class="title">Usage:</span><br>
+                                    <span class="small">
+                                        <details>
+                                            <summary>Stock</summary>
+                                            <span class="small">To stock it, place a container on the face of the shop that lines up with the edge of a block.<br>
+                                            Eg. if you place it on the ground, the bottom face lines up with the block below it; place a container there.</span>
+                                        </details>
+                                        <details>
+                                            <summary>Currency</summary>
+                                            <span class="small">When the "Hoppers" option is enabled, placing a hopper below the shop will pull earned currency from it.<br>
+                                            This can be used to store greater amounts of currency, or automatically transfer it to a storage system.</span>
+                                        </details>
+                                        <details>
+                                            <summary>Selling</summary>
+                                            <ul style="margin: 10px;">
+                                                <span class="title">Types:</span>
+                                                <li>
+                                                    <details>
+                                                        <summary class="small">Price Type:</summary>
+                                                        <ul>
+                                                            <li>
+                                                                <details>
+                                                                    <summary class="small">Free</summary>
+                                                                    <span class="small">The player simply clicks the item to get as much of it as they want.</span>
+                                                                </details>
+                                                            </li>
+                                                            <li>
+                                                                <details>
+                                                                    <summary class="small">Item</summary>
+                                                                    <span class="small">The player needs an amount of the specified item in their inventory to purchase the item.<br>
+                                                                    Purchasing costs said amount of said item.</span>
+                                                                </details>
+                                                            </li>
+                                                        </ul>
+                                                    </details>
+                                                </li>
+                                                <li>
+                                                    <details>
+                                                        <summary class="small">Stock Type:</summary>
+                                                        <ul>
+                                                            <li>
+                                                                <details>
+                                                                    <summary class="small">Equal Item</summary>
+                                                                    <span class="small">The player clicks on the item to purchase the specified amount of it.<br>
+                                                                    Only one type of item can be sold per shop when configured this way.</span>
+                                                                </details>
+                                                            </li>
+                                                            <li>
+                                                                <details>
+                                                                    <summary class="small">Any Stack</summary>
+                                                                    <span class="small">The player clicks on the item to open another menu where they can select any stack in the stock container to purchase.<br>
+                                                                    The price remains constant regardless of item type or stack size.<br>
+                                                                    Multiple types of items can be sold per shop when configured this way.<br>
+                                                                    The menu displays the items in the same order and stack size as the stock container; it does not preserve any gaps between items.</span>
+                                                                </details>
+                                                            </li>
+                                                        </ul>
+                                                    </details>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                        <details>
+                                            <summary>Removal</summary>
+                                            <span class="small">Before removing it, make sure the currency storage is empty; it will not break otherwise.</span>
+                                        </details>
+                                    </span>
+                                </p>
+                                <p>
+                                    <span class="title"></span>
+                                </p>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary><b>Upgraded Mobs</b></summary>
+                <div class="details">
+                    <span class="title">Tweaks</span>
+                    <ul class="top">
+                        <span class="small">Information taken verbatim from <a href="https://modrinth.com/datapack/upgraded-mobs">here</a>.</span>
+                        <li>
+                            <details>
+                                <summary>General</summary>
+                                <span class="small">
+                                    All mobs have increased follow range, allowing them to see you from farther away. Their movement speed is also increased slightly to make running away a little bit harder. 
+                                </span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Zombies</summary>
+                                <span class="small">
+                                    Zombies (including drowned, husks, and zombie villagers) receive two upgrades that make fighting a horde a little more threatening:
+                                    <ul>
+                                        <li class="small">All zombies are capable of breaking doors, regardless of the difficulty.</li>
+                                        <li class="small">Periodically, zombies will dash at a nearby player.</li>
+                                        <li class="small">Unique to this dash is a bite attack that deals extra damage. This attack can be blocked, but be warned, it will eat through your shield quickly!</li>
+                                    </ul>
+                                </span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Drowned</summary>
+                                <span class="small">
+                                    In addition to the default zombie dash/bite, drowned get the following two changes:
+                                    <ul>
+                                        <li class="small">Drowned swim faster now, on top of the default movement buff for all mobs.</li>
+                                        <li class="small">If a player has water below them, drowned will periodically pull them deeper underwater in an attempt to, well, drown them. This can even happen if you are traveling above them in a boat. Watch out for hordes!</li>
+                                    </ul>
+                                </span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Elder Guardians</summary>
+                                <span class="small">
+                                    Elder guardians have been upgraded to be full fledged boss mobs.
+                                    <ul>
+                                        <li class="small">Elder guardians have 300 HP, same as the vanilla wither.</li>
+                                        <li class="small">In combat, elder guardians will periodically debuff a random player with weakness, slowness, and/or blindness.</li>
+                                        <li class="small">If no guardians are nearby, an elder guardian will periodically summon mini-guardians that disappear after a short time.</li>
+                                        <li class="small">Below half HP, elder guardians will periodically turn invisible.</li>
+                                    </ul>
+                                </span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Evokers</summary>
+                                <span class="small">
+                                    Evokers are now mini-bosses that receive the following upgrades:
+                                    <ul>
+                                        <li class="small">Evokers now have 150 HP, and while below half HP, they gain Regeneration 1.</li>
+                                        <li class="small">Evokers also hold a totem of undying in their off-hand that must be popped before killing them. This doesn't change combat with them that much, but it does make sense thematically.</li>
+                                        <li class="small">Whenever an evoker uses their fang attack, it will also follow up with two more waves of fangs in the same place.</li>
+                                        <li class="small">To compensate for all of this, vexes now die immediately if there aren't any evokers nearby.</li>
+                                    </ul>
+                                </span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Piglin Brutes</summary>
+                                <span class="small">
+                                    While their damage is untouched, piglin brutes now receive a few upgrades that make it harder to fight them than just knocking them back while you stand still:
+                                    <ul>
+                                        <li class="small">Brutes have 75% knockback resistance by default.</li>
+                                        <li class="small">Brutes will periodically dash at nearby players.</li>
+                                        <li class="small">Brutes will also throw the closest player or wither skeleton high into the air. Watch out for lava!</li>
+                                        <li class="small">Brutes have a small chance of spawning with random pieces of netherite armor, or with knockback on their axe.</li>
+                                    </ul>
+                                </span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Pillagers</summary>
+                                <span class="small">
+                                    Pillagers aren't holding back anymore.
+                                    <ul>
+                                        <li class="small">Some pillagers will shoot weakness arrows or even firework rockets instead of regular arrows.</li>
+                                        <li class="small">Some pillagers will also have Quick Charge II crossbows.</li>
+                                        <li class="small">The above two upgrades are applied more often during raids.</li>
+                                    </ul>
+                                </span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Spiders</summary>
+                                <span class="small">
+                                    Everyone <i>loves</i> spiders.
+                                    <ul>
+                                        <li class="small">Spiders will periodically dash at nearby players.</li>
+                                        <li class="small">They will also periodically trap the closest player in a temporary cobweb. Remember to use a sword or water to break out!</li>
+                                    </ul>
+                                </span>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Witches</summary>
+                                <span class="small">
+                                    For as rare as they are, witches are a little too easy.
+                                    <ul>
+                                        <li class="small">Witches now have 60 HP.</li>
+                                        <li class="small">Splash potions thrown by witches have a 25% chance of being lingering potions instead.</li>
+                                        <li class="small">If a player is nearby, splash potions have a 10% chance of inflicting blindness.</li>
+                                    </ul>
+                                </span>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+        </p>
+        <hr class="expanding-hr">
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
